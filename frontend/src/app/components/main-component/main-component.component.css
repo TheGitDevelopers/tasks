@@ -1,0 +1,104 @@
+header {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.headerLogo {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.mainOuter {
+  display: flex;
+  height: 80vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mainSidesTop {
+  flex: 0 1 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.mainSidesTop:nth-of-type(1) {
+  background-color: white;
+}
+
+.mainSidesTop:nth-of-type(2) {
+  background-color: #073b4c;
+}
+
+.mainSidesBottom {
+  flex: 0 1 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+}
+
+/* .mainSidesBottom div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1.5em;
+} */
+
+/* .mainSidesBottom span {
+  text-align: center;
+  flex: 0 1 50%;
+  padding: 1em;
+  box-sizing: border-box;
+  font-size: 1.7em;
+} */
+.mainSidesBottom > div {
+  display: flex;
+  flex: 0 1 50%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.mainSidesBottom div div {
+  padding: 1.8rem 2.5rem;
+  height: 4.5rem;
+  font-size: 1.2em;
+  align-self: center;
+  position: relative;
+}
+.mainSidesBottom .mainSidesBottomLeft {
+  background-color: white;
+  justify-content: flex-end;
+}
+.mainSidesBottom .mainSidesBottomLeft div {
+  background-color: #073b4c;
+  color: white;
+  border-radius: 5px 0 0 5px;
+}
+
+.mainSidesBottom .mainSidesBottomRight {
+  background-color: #073b4c;
+  justify-content: flex-start;
+}
+.mainSidesBottom .mainSidesBottomRight div {
+  color: #32f9a5;
+  background-color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+.btn-create {
+  background-color: #f2f2f2;
+  color: black;
+  position: absolute;
+  left: 50%;
+  width: 110%;
+  margin-left: -5%;
+  top: 4rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  z-index: 1;
+}
