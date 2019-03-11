@@ -1,9 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url(assets/font/SEGOEUI.TTF) format('opentype');
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
 }
 
 button {
@@ -16,4 +25,9 @@ button {
   cursor: pointer;
   font-weight: bold;
   font-family: sans-serif;
+}
+
+button:hover {
+  transform: scale(0.95);
+  opacity: 0.95;
 }

@@ -3,11 +3,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+header img[alt='logo'] {
+  height: 3.6em;
+  margin-right: 0.4em;
+}
+
 .header-logo {
-  font-family: sans-serif;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 3.5em;
 }
 
 .main-outer {
@@ -51,7 +57,7 @@ header {
 .main-sides-bottom div div {
   padding: 1.8rem 2.5rem;
   height: 8.5rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   font-size: 1.2em;
   align-self: center;
   position: relative;
@@ -87,4 +93,20 @@ header {
   padding-left: 1em;
   padding-right: 1em;
   z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-outer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .header-logo {
+    font-size: 1.85em;
+  }
+  .main-sides-bottom .main-sides-bottom-right {
+    background-color: #fff;
+  }
+  .main-sides-bottom div div {
+    font-size: 1em;
+  }
 }
