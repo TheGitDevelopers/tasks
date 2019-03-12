@@ -1,0 +1,117 @@
+header {
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header img[alt='logo'] {
+  height: 3.6em;
+  margin-right: 0.4em;
+}
+
+.header-logo {
+  font-weight: bold;
+  font-size: 3.5em;
+}
+
+.main-outer {
+  display: flex;
+  height: 80vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.main-sides-top {
+  flex: 0 1 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.main-sides-top:nth-of-type(1) {
+  background-color: white;
+}
+
+.main-sides-top:nth-of-type(2) {
+  background-color: #073b4c;
+}
+
+.main-sides-bottom {
+  flex: 0 1 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+}
+
+.main-sides-bottom > div {
+  display: flex;
+  flex: 0 1 50%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.main-sides-bottom div div {
+  padding: 1.8rem 2.5rem;
+  height: 8.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  font-size: 1.2em;
+  align-self: center;
+  position: relative;
+}
+.main-sides-bottom .main-sides-bottom-left {
+  background-color: white;
+  justify-content: flex-end;
+}
+.main-sides-bottom .main-sides-bottom-left div {
+  background-color: #073b4c;
+  color: white;
+  border-radius: 5px 0 0 5px;
+}
+
+.main-sides-bottom .main-sides-bottom-right {
+  background-color: #073b4c;
+  justify-content: flex-start;
+}
+.main-sides-bottom .main-sides-bottom-right div {
+  color: #32f9a5;
+  background-color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+.btn-create {
+  background-color: #f2f2f2;
+  color: black;
+  position: absolute;
+  left: 50%;
+  width: 110%;
+  margin-left: -5%;
+  top: 4rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-outer {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .header-logo {
+    font-size: 1.85em;
+  }
+  .main-sides-bottom .main-sides-bottom-right {
+    background-color: #fff;
+  }
+  .main-sides-bottom .main-sides-bottom-left {
+    background-color: #073b4c;
+  }
+  .main-sides-bottom div div {
+    font-size: 1.8em;
+    box-shadow: unset;
+    padding: 0.5rem 1rem;
+  }
+}

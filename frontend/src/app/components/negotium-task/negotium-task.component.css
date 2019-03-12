@@ -1,0 +1,48 @@
+.negotium-task-outer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.negotium-task-title {
+  font-size: 2.5em;
+  text-align: center;
+  color: rgb(50, 249, 165);
+  height: 20vh;
+  align-items: center;
+  display: flex;
+  padding-top: 1em;
+}
+
+.negotium-task-outer ul {
+  list-style: none;
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  height: 80vh;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: rgb(102, 102, 102);
+}
+
+app-negotium-list-app {
+  margin-bottom: 1em;
+  cursor: pointer;
+  transition: 0.2s transform ease-in-out;
+}
+
+app-negotium-list-app:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+  .negotium-task-title {
+    font-size: 2.1em;
+  }
+  .negotium-task-outer ul {
+    width: 90%;
+  }
+}
