@@ -114,24 +114,4 @@ header img[alt='logo'] {
     box-shadow: unset;
     padding: 0.5rem 1rem;
   }
-  /* .main-sides-bottom div div {
-    font-size: 1.4em;
-    padding: 3.24rem 3.75rem;
-    height: 12.75rem;
-  } */
-  /* .btn-create {
-    top: 7rem;
-} */
 }
-
-/* @media only screen and (max-width: 450px) {
-  .main-sides-bottom div div {
-    font-size: 1.4em;
-    padding: 2.7rem 3.75rem;
-    height: 12.75rem;
-  }
-  .btn-create {
-    top: 5rem;
-}
-}
-} */
