@@ -5,5 +5,5 @@
   "tabWidth": 2,
   "semi": true,
   "bracketSpacing": true,
-  "prettier.disableLanguages": ["html"]
+  // "prettier.disableLanguages": ["html"]
 }
