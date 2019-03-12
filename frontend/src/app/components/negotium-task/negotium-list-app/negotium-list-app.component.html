@@ -1,4 +1,11 @@
-<li class="negotium-item">
-  <img [src]="check == true ? 'assets/images/negotium-task/check.png' : 'assets/images/negotium-task/uncheck.png'" class="check-status">
+<li class="negotium-item" routerLink="">
+  <img
+    [src]="
+      check == true
+        ? 'assets/images/negotium-task/check.png'
+        : 'assets/images/negotium-task/uncheck.png'
+    "
+    class="check-status"
+  />
   <ng-content></ng-content>
 </li>

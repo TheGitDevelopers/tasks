@@ -13,7 +13,7 @@
 .negotium-item {
   display: flex;
   justify-content: space-between;
-  padding: 0.25em;
+  padding: 1em 0.25em;
   border: 1px solid rgba(0, 0, 0, 0.1);
   align-items: center;
 }
