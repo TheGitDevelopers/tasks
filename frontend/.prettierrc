@@ -1,8 +1,9 @@
 {
-  "printWidth": 100,
+  "printWidth": 80,
   "singleQuote": true,
   "useTabs": false,
   "tabWidth": 2,
   "semi": true,
-  "bracketSpacing": true
+  "bracketSpacing": true,
+  // "prettier.disableLanguages": ["html"]
 }
