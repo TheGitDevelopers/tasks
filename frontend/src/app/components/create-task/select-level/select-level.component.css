@@ -1,0 +1,14 @@
+.select-level-base{
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+.select-level-base > p 
+{
+    padding-left: 39%;
+    padding-top: 8px;
+}
+.select-level-individual
+{
+    background-color: rgb(0, 255, 85);
+}

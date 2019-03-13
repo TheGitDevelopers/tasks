@@ -1,0 +1,27 @@
+header 
+{
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header > p 
+{
+    color: #28DE77;
+    font-size: 30px;
+    font-weight: 500;
+}
+.select-level-importance
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: grey;
+}
+.select-level-container 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
