@@ -22,3 +22,17 @@
 {
     background-color: #F2273B;
 }
+.select-level-individual-2-custom
+{
+    width: 40px;
+    height: 40px;
+    color: white;
+    margin-left: 20px;
+    margin-top: 15px;
+    background-color: #F2273B;
+}
+.select-level-individual-2-custom > p
+{
+    margin-left: 28%;
+    padding-top: 9px;
+}
