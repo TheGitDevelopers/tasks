@@ -10,6 +10,7 @@ import { NegotiumListAppComponent } from './components/negotium-task/negotium-li
 import { CreateTaskComponent } from './components/create-task/create-task.component';
 import { FormFieldComponent } from './components/create-task/form-field/form-field.component';
 import { SelectLevelComponent } from './components/create-task/select-level/select-level.component';
+import { ButtonSelectCategoryComponent } from './components/create-task/button-select-category/button-select-category.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SelectLevelComponent } from './components/create-task/select-level/sele
     NegotiumListAppComponent,
     CreateTaskComponent,
     FormFieldComponent,
-    SelectLevelComponent
+    SelectLevelComponent,
+    ButtonSelectCategoryComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
