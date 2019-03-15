@@ -1,9 +1,15 @@
-header {
-  height: 20vh;
+%flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+$bg-blue: #073b4c;
+
+header {
+  height: 20vh;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  @extend %flex-center;
 }
 
 header img[alt='logo'] {
@@ -25,25 +31,22 @@ header img[alt='logo'] {
 
 .main-sides-top {
   flex: 0 1 50%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+
+  @extend %flex-center;
 }
 .main-sides-top:nth-of-type(1) {
   background-color: white;
 }
 
 .main-sides-top:nth-of-type(2) {
-  background-color: #073b4c;
+  background-color: $bg-blue;
 }
 
 .main-sides-bottom {
   flex: 0 1 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
   align-items: stretch;
   position: relative;
+  @extend %flex-center;
 }
 
 .main-sides-bottom > div {
@@ -67,13 +70,13 @@ header img[alt='logo'] {
   justify-content: flex-end;
 }
 .main-sides-bottom .main-sides-bottom-left div {
-  background-color: #073b4c;
+  background-color: $bg-blue;
   color: white;
   border-radius: 5px 0 0 5px;
 }
 
 .main-sides-bottom .main-sides-bottom-right {
-  background-color: #073b4c;
+  background-color: $bg-blue;
   justify-content: flex-start;
 }
 .main-sides-bottom .main-sides-bottom-right div {
@@ -107,7 +110,7 @@ header img[alt='logo'] {
     background-color: #fff;
   }
   .main-sides-bottom .main-sides-bottom-left {
-    background-color: #073b4c;
+    background-color: $bg-blue;
   }
   .main-sides-bottom div div {
     font-size: 1.8em;

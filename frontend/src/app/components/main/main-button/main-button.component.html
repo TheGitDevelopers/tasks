@@ -4,7 +4,7 @@
     [ngStyle]="{ color: titleColor == 'darkBlue' ? '#32f9a5' : '#ef476f' }"
     >{{ title }}</span
   >
-  <button [className]="buttonClass" [routerLink]="href">
+  <button [className]="buttonClass" [routerLink]="[href, mode]">
     Check tasks
   </button>
 </div>
