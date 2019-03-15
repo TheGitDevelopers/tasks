@@ -12,15 +12,31 @@
 }
 .select-level-individual
 {
+    cursor: pointer;
     background-color: #32F9A5;
 }
+.select-level-individual:hover 
+{
+    background-color: grey;
+}
+
 .select-level-individual-1
 {
+    cursor: pointer;
     background-color: #FFD166;
+}
+.select-level-individual-1:hover
+{
+    background-color: grey;
 }
 .select-level-individual-2
 {
+    cursor: pointer;
     background-color: #EF476F;
+}
+.select-level-individual-2:hover
+{
+    background-color: grey;
 }
 .select-level-individual-2-custom
 {
@@ -30,6 +46,11 @@
     margin-left: 20px;
     margin-top: 15px;
     background-color: #EF476F;
+    cursor: pointer;
+}
+.select-level-individual-2-custom:hover
+{
+    background-color: grey;
 }
 .select-level-individual-2-custom > p
 {
