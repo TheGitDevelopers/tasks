@@ -1,6 +1,7 @@
 <header>
 <p>Create the task!</p>
 </header>
+<div class="form-field-container">
 <app-form-field
 NameInput="Assigned to:">
 </app-form-field>
@@ -13,6 +14,7 @@ NameInput="Estimated time:">
 <app-form-field
 NameInput="Status:">
 </app-form-field>
+</div>
 <div class="select-level-importance">
   Select the level of Importance:
 </div>
@@ -63,7 +65,7 @@ selectLevel="select-level-base"
 selectLevelIndividual="select-level-individual-2"
 ></app-select-level>
 <app-select-level 
-number="10"
+number="10" 
 selectLevelIndividual="select-level-individual-2-custom"
 ></app-select-level>
 </div>

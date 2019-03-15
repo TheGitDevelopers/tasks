@@ -12,15 +12,15 @@
 }
 .select-level-individual
 {
-    background-color: rgb(0, 255, 85);
+    background-color: #32F9A5;
 }
 .select-level-individual-1
 {
-    background-color: rgb(240, 216, 0);
+    background-color: #FFD166;
 }
 .select-level-individual-2
 {
-    background-color: #F2273B;
+    background-color: #EF476F;
 }
 .select-level-individual-2-custom
 {
@@ -29,7 +29,7 @@
     color: white;
     margin-left: 20px;
     margin-top: 15px;
-    background-color: #F2273B;
+    background-color: #EF476F;
 }
 .select-level-individual-2-custom > p
 {
