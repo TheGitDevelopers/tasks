@@ -6,7 +6,7 @@ import { NegotiumTaskComponent } from './components/negotium-task/negotium-task.
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'negotium-task', component: NegotiumTaskComponent }
+  { path: 'negotium-task/:mode', component: NegotiumTaskComponent }
 ];
 
 @NgModule({

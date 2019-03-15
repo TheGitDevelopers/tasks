@@ -1,22 +1,22 @@
-<div class="negotium-task-outer">
-  <span class="negotium-task-title">Your Negotium App</span>
+<div [class]="mode + '-outer'">
+  <span [class]="mode + '-title'">Your Negotium App</span>
   <ul>
-    <app-negotium-list-app [check]="true"
+    <app-negotium-list-app [mode]="mode" [check]="true"
       >Your Negotium App</app-negotium-list-app
     >
-    <app-negotium-list-app [check]="false"
+    <app-negotium-list-app [mode]="mode" [check]="false"
       >Your Negotium App</app-negotium-list-app
     >
-    <app-negotium-list-app [check]="false"
+    <app-negotium-list-app [mode]="mode" [check]="false"
       >Your Negotium App</app-negotium-list-app
     >
-    <app-negotium-list-app [check]="true"
+    <app-negotium-list-app [mode]="mode" [check]="true"
       >Your Negotium App</app-negotium-list-app
     >
-    <app-negotium-list-app [check]="false"
+    <app-negotium-list-app [mode]="mode" [check]="false"
       >Your Negotium App</app-negotium-list-app
     >
-    <app-negotium-list-app [check]="false"
+    <app-negotium-list-app [mode]="mode" [check]="false"
       >Your Negotium App</app-negotium-list-app
     >
   </ul>

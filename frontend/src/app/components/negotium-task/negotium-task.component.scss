@@ -1,0 +1,86 @@
+$green: #32f9a5;
+$input-grey: rgba(112, 112, 112, 0.11);
+
+.your-app-outer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.your-app-title {
+  font-size: 2.5em;
+  text-align: center;
+  color: $green;
+  height: 20vh;
+  align-items: center;
+  display: flex;
+  padding-top: 1em;
+}
+
+.your-app-outer ul {
+  list-style: none;
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  height: 80vh;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: rgb(102, 102, 102);
+}
+.other-tasks-outer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.other-tasks-title {
+  font-size: 2.5em;
+  text-align: center;
+  color: $green;
+  height: 20vh;
+  align-items: center;
+  display: flex;
+  padding-top: 1em;
+}
+
+.other-tasks-outer ul {
+  list-style: none;
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  height: 80vh;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: rgb(102, 102, 102);
+}
+
+app-negotium-list-app {
+  margin-bottom: 1em;
+  cursor: pointer;
+  transition: 0.2s transform ease-in-out;
+}
+
+app-negotium-list-app:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+  .your-app-title {
+    font-size: 2.1em;
+  }
+  .your-app-outer ul {
+    width: 90%;
+  }
+  .other-tasks-title {
+    font-size: 2.1em;
+  }
+  .other-tasks-outer ul {
+    width: 90%;
+  }
+}

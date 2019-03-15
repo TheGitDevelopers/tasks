@@ -1,3 +1,5 @@
+$yellow: #ffd166;
+$blue: #118ab2;
 .app-main-button-child {
   display: flex;
   flex-wrap: wrap;
@@ -17,13 +19,13 @@
 }
 
 .btn-yellow {
-  background-color: #ffd166;
-  border-color: #ffd166;
+  background-color: $yellow;
+  border-color: $yellow;
 }
 
 .btn-transparent {
   background-color: transparent;
-  border-color: #118ab2;
+  border-color: $blue;
 }
 
 @media only screen and (max-width: 600px) {

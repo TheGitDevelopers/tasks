@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+$green: #32f9a5;
+$yellow: #ffd166;
+$pink: #ef476f;
+$blue: #118ab2;
+$input-grey: rgba(112, 112, 112, 0.11);
+
 @font-face {
   font-family: 'Segoe UI';
   src: url(assets/font/SEGOEUI.TTF) format('opentype');
@@ -19,7 +25,7 @@ button {
   border: 2px solid transparent;
   border-radius: 50px;
   padding: 0.6rem 3rem;
-  color: white;
+  color: #fff;
   font-size: 1.1rem;
   outline: none;
   cursor: pointer;

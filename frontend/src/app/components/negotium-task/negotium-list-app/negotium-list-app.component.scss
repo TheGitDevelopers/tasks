@@ -1,0 +1,51 @@
+%border {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.check-status {
+  border-radius: 100%;
+  width: 2em;
+  height: 2em;
+  padding: 0.35em;
+  display: flex;
+  margin-left: 0.5em;
+  align-items: center;
+  justify-content: center;
+  @extend %border;
+}
+
+.your-app-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0.25em;
+  align-items: center;
+  @extend %border;
+}
+
+.your-app-item:after {
+  background-image: url('src/assets/images/negotium-task/arrow.png');
+  content: '';
+  margin-right: 1em;
+  width: 1em;
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.other-tasks-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0.25em;
+  align-items: center;
+  @extend %border;
+}
+
+.other-tasks-item:after {
+  background-image: url('src/assets/images/negotium-task/arrow.png');
+  content: '';
+  margin-right: 1em;
+  width: 1em;
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
