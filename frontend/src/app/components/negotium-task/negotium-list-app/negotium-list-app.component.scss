@@ -14,7 +14,7 @@
   @extend %border;
 }
 
-.your-app-item {
+.yourapp-item {
   display: flex;
   justify-content: space-between;
   padding: 1em 0.25em;
@@ -22,7 +22,7 @@
   @extend %border;
 }
 
-.your-app-item:after {
+.yourapp-item:after {
   background-image: url('src/assets/images/negotium-task/arrow.png');
   content: '';
   margin-right: 1em;
@@ -32,15 +32,16 @@
   background-repeat: no-repeat;
 }
 
-.other-tasks-item {
+.othertasks-item {
   display: flex;
   justify-content: space-between;
   padding: 1em 0.25em;
   align-items: center;
   @extend %border;
+  background-color: #fff;
 }
 
-.other-tasks-item:after {
+.othertasks-item:after {
   background-image: url('src/assets/images/negotium-task/arrow.png');
   content: '';
   margin-right: 1em;
