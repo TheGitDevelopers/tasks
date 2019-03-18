@@ -1,0 +1,70 @@
+$green: #32f9a5;
+$input-grey: rgba(112, 112, 112, 0.11);
+
+$pink: #ef476f;
+$dark-blue: #073b4c;
+
+.title {
+  font-size: 2.5em;
+  text-align: center;
+  color: $green;
+  align-items: center;
+  display: flex;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-family: 'Segoe UI', sans-serif;
+  margin-left: 40px;
+}
+.header {
+  border: 1px $input-grey solid;
+  margin: 40px 40px 40px 40px;
+}
+.task-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px $input-grey solid;
+  width: 25%;
+  margin: 0px 40px 40px 40px;
+  padding: 2em;
+}
+.tasks-paragraphs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.control-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  width: 230px;
+}
+.edit-tasks-button {
+  background-color: #ffd166;
+}
+.change-status-button {
+  background-color: #32f9a5;
+}
+.task {
+  display: flex;
+  flex-direction: row;
+}
+.task-description {
+  border: 1px $input-grey solid;
+  width: 50%;
+  margin: 0px 40px 40px 40px;
+}
+
+.task-topic {
+  border-bottom: 1px $input-grey solid;
+  padding: 30px;
+}
+.task-body {
+  padding: 30px;
+}
