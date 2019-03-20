@@ -10,10 +10,8 @@ $dark-blue: #073b4c;
   color: $green;
   align-items: center;
   display: flex;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding: 0.5em;
   font-family: 'Segoe UI', sans-serif;
-  margin-left: 40px;
 }
 .header {
   border: 1px $input-grey solid;
@@ -26,7 +24,7 @@ $dark-blue: #073b4c;
   align-items: center;
   border: 1px $input-grey solid;
   width: 25%;
-  margin: 0px 40px 40px 40px;
+  margin: 0px 40px 40px;
   padding: 2em;
 }
 .tasks-paragraphs {
@@ -71,8 +69,7 @@ button {
 }
 .footer {
   color: $input-grey;
-  margin-left: 40px;
-  margin-bottom: 20px;
+  margin: 0px 0px 40px 40px;
   display: flex;
   align-items: center;
   cursor: pointer;
