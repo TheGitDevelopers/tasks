@@ -17,7 +17,7 @@ $dark-blue: #073b4c;
 }
 .header {
   border: 1px $input-grey solid;
-  margin: 40px 40px 40px 40px;
+  margin: 0px 0px 40px 0px;
 }
 .task-details {
   display: flex;
@@ -72,6 +72,7 @@ button {
 .footer {
   color: $input-grey;
   margin-left: 40px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   cursor: pointer;
