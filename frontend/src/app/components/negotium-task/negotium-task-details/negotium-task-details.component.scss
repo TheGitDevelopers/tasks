@@ -43,7 +43,7 @@ $dark-blue: #073b4c;
   align-items: center;
 }
 button {
-  width: 230px;
+  width: 80%;
 }
 .edit-tasks-button {
   background-color: #ffd166;
@@ -54,6 +54,7 @@ button {
 .task {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .task-description {
   border: 1px $input-grey solid;
@@ -67,4 +68,28 @@ button {
 }
 .task-body {
   padding: 30px;
+}
+.footer {
+  color: $input-grey;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 20px 7px 0;
+  border-color: transparent $input-grey transparent transparent;
+  margin-right: 2px;
+}
+
+@media screen and (max-width: 790px) {
+  .task-details {
+    width: 90%;
+  }
+  .task-description {
+    width: 80%;
+  }
 }
