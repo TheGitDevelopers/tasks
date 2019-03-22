@@ -1,0 +1,45 @@
+@import "../negotium-task-details.component";
+
+.task-details {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px $input-grey solid;
+  width: 100%;
+  //margin: 0 40px 40px;
+  //padding: 2em;
+  .tasks-paragraphs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //margin-bottom: 80px;
+  }
+}
+
+.control-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-tasks-button {
+  background-color: #ffd166;
+}
+
+.change-status-button {
+  background-color: #32f9a5;
+}
+
+@media screen and (max-width: 790px) {
+  .task-details {
+    width: 90%;
+  }
+  .task-description {
+    width: 80%;
+  }
+}

@@ -8,6 +8,8 @@ import { MainButtonComponent } from './components/main/main-button/main-button.c
 import { NegotiumTaskComponent } from './components/negotium-task/negotium-task.component';
 import { NegotiumListAppComponent } from './components/negotium-task/negotium-list-app/negotium-list-app.component';
 import { NegotiumTaskDetailsComponent } from './components/negotium-task/negotium-task-details/negotium-task-details.component';
+import { TaskDescriptionComponent } from './components/negotium-task/negotium-task-details/task-description/task-description.component';
+import { TaskDetailsComponent } from './components/negotium-task/negotium-task-details/task-details/task-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NegotiumTaskDetailsComponent } from './components/negotium-task/negotiu
     MainButtonComponent,
     NegotiumTaskComponent,
     NegotiumListAppComponent,
-    NegotiumTaskDetailsComponent
+    NegotiumTaskDetailsComponent,
+    TaskDescriptionComponent,
+    TaskDetailsComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

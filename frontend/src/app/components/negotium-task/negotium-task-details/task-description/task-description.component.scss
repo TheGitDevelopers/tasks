@@ -1,0 +1,15 @@
+@import "../negotium-task-details.component";
+
+.task-description {
+  border: 1px $input-grey solid;
+  width: 100%;
+  margin: 0;
+}
+
+.task-topic {
+  border-bottom: 1px $input-grey solid;
+  padding: 0;
+}
+.task-body {
+  padding: 0;
+}

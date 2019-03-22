@@ -13,10 +13,12 @@ $dark-blue: #073b4c;
   padding: 0.5em;
   font-family: 'Segoe UI', sans-serif;
 }
+
 .header {
   border: 1px $input-grey solid;
   margin: 0px 0px 40px 0px;
 }
+
 .task-details {
   display: flex;
   flex-direction: column;
@@ -27,6 +29,7 @@ $dark-blue: #073b4c;
   margin: 0px 40px 40px;
   padding: 2em;
 }
+
 .tasks-paragraphs {
   display: flex;
   flex-direction: column;
@@ -34,26 +37,37 @@ $dark-blue: #073b4c;
   align-items: center;
   margin-bottom: 80px;
 }
+
 .control-buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 button {
   width: 80%;
 }
+
+.description-wrap {
+  width: 60%;
+  margin: 0 50px;
+}
+
 .edit-tasks-button {
   background-color: #ffd166;
 }
+
 .change-status-button {
   background-color: #32f9a5;
 }
+
 .task {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .task-description {
   border: 1px $input-grey solid;
   width: 50%;
@@ -64,9 +78,11 @@ button {
   border-bottom: 1px $input-grey solid;
   padding: 30px;
 }
+
 .task-body {
   padding: 30px;
 }
+
 .footer {
   color: $input-grey;
   margin: 0px 0px 40px 40px;
@@ -74,6 +90,7 @@ button {
   align-items: center;
   cursor: pointer;
 }
+
 .arrow-left {
   width: 0;
   height: 0;
