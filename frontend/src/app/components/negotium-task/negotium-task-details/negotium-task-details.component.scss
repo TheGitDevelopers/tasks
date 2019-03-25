@@ -19,16 +19,16 @@ $dark-blue: #073b4c;
   margin: 0px 0px 40px 0px;
 }
 
-.task-details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px $input-grey solid;
-  width: 25%;
-  margin: 0px 40px 40px;
-  padding: 2em;
-}
+// .task-details {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   // border: 1px $input-grey solid;
+//   width: 25%;
+//   margin: 0px 40px 40px;
+//   padding: 2em;
+// }
 
 .tasks-paragraphs {
   display: flex;
@@ -50,7 +50,12 @@ button {
 }
 
 .description-wrap {
-  width: 60%;
+  width: 50%;
+  margin: 0 50px;
+}
+
+.details-wrap {
+  width: 25%;
   margin: 0 50px;
 }
 
@@ -68,16 +73,15 @@ button {
   flex-wrap: wrap;
 }
 
-.task-description {
-  border: 1px $input-grey solid;
-  width: 50%;
-  margin: 0px 40px 40px 40px;
-}
+// .task-description {
+//   width: 50%;
+//   margin: 0px 40px 40px 40px;
+// }
 
-.task-topic {
-  border-bottom: 1px $input-grey solid;
-  padding: 30px;
-}
+// .task-topic {
+//   border-bottom: 1px $input-grey solid;
+//   padding: 30px;
+// }
 
 .task-body {
   padding: 30px;
@@ -100,11 +104,16 @@ button {
   margin-right: 2px;
 }
 
-@media screen and (max-width: 790px) {
-  .task-details {
-    width: 90%;
+@media screen and (max-width: 768px) {
+  .description-wrap {
+    margin: 20px 40px;
+    width: 100%;
   }
   .task-description {
     width: 80%;
+  }
+  .details-wrap {
+    width: 100%;
+    margin: 20px 40px;
   }
 }

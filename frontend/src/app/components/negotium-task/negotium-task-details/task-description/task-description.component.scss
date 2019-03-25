@@ -1,4 +1,4 @@
-@import "../negotium-task-details.component";
+@import '../negotium-task-details.component';
 
 .task-description {
   border: 1px $input-grey solid;
@@ -8,8 +8,8 @@
 
 .task-topic {
   border-bottom: 1px $input-grey solid;
-  padding: 0;
+  padding: 15px;
 }
 .task-body {
-  padding: 0;
+  padding: 20px;
 }
