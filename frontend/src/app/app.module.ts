@@ -11,6 +11,8 @@ import { CreateTaskComponent } from './components/create-task/create-task.compon
 import { FormFieldComponent } from './components/create-task/form-field/form-field.component';
 import { SelectLevelComponent } from './components/create-task/select-level/select-level.component';
 import { ButtonSelectCategoryComponent } from './components/create-task/button-select-category/button-select-category.component';
+import { ReactiveFormsModule } from "@angular/forms";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,7 @@ import { ButtonSelectCategoryComponent } from './components/create-task/button-s
     SelectLevelComponent,
     ButtonSelectCategoryComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
