@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-form-field',
@@ -9,8 +10,10 @@ export class FormFieldComponent implements OnInit {
 
   constructor() { }
   @Input() NameInput;
+  @Input() Name;
   ngOnInit() {
-    
   }
+  Name = new FormControl('');
+
 
 }
