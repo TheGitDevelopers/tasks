@@ -1,7 +1,10 @@
 const mongoose = require("mongoose");
-
+const dotenv = require("dotenv");
+dotenv.config();
 mongoose.connect(
-  "mongodb+srv://dbUser:dbUser@cluster0-naxhj.mongodb.net/test?retryWrites=true",
+  `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${
+    process.env.DB_HOST
+  }/${process.env.DB_NAME}?retryWrites=true`,
   {
     useNewUrlParser: true
   }
