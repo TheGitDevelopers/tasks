@@ -3,13 +3,11 @@
 .task-description {
   border: 1px $input-grey solid;
   width: 100%;
-  margin: 0;
-}
-
-.task-topic {
-  border-bottom: 1px $input-grey solid;
-  padding: 15px;
-}
-.task-body {
-  padding: 20px;
+  .task-topic {
+    border-bottom: 1px $input-grey solid;
+    padding: 1em;
+  }
+  .task-body {
+    padding: 1.5em;
+  }
 }

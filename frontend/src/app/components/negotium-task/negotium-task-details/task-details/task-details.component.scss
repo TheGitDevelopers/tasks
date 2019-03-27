@@ -2,14 +2,16 @@
 
 .task-details {
   display: flex;
-  padding: 0;
-  margin: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px $input-grey solid;
   width: 100%;
-  padding: 2em;
+  height: 100%;
+  padding-bottom: 2em;
+  padding-top: 2em;
+  margin-bottom: 40px;
+
   .tasks-paragraphs {
     display: flex;
     flex-direction: column;
@@ -23,21 +25,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .edit-tasks-button {
+    background-color: #ffd166;
+  }
+
+  .change-status-button {
+    background-color: #32f9a5;
+  }
 }
 
-.edit-tasks-button {
-  background-color: #ffd166;
+@media screen and (max-width: 790px) {
+  .task-details {
+    width: 100%;
+  }
+  .task-description {
+    width: 100%;
+  }
 }
-
-.change-status-button {
-  background-color: #32f9a5;
-}
-
-// @media screen and (max-width: 790px) {
-//   .task-details {
-//     width: 90%;
-//   }
-//   .task-description {
-//     width: 80%;
-//   }
-// }
