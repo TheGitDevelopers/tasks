@@ -1,20 +1,38 @@
 $green: #32f9a5;
-$input-grey: rgba(112, 112, 112, 0.11);
+$grey: #9eb3b9;
 
 $pink: #ef476f;
 $dark-blue: #073b4c;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.negotium-background {
+  background-color: white;
+  height: 100%;
+}
+.other-background {
+  background-color: $dark-blue;
+}
 
 .header {
-  border: 1px $input-grey solid;
+  background-color: white;
+  border: 1px $grey solid;
   margin: 0px 0px 40px 0px;
   .title {
     font-size: 2.5em;
     text-align: center;
-    color: $green;
     align-items: center;
     display: flex;
     padding: 0.5em;
     font-family: 'Segoe UI', sans-serif;
+  }
+  .other-title {
+    color: $pink;
+  }
+  .negotium-title {
+    color: $green;
   }
 }
 
@@ -27,12 +45,14 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
   .description-wrap {
+    background-color: white;
     width: 50%;
     margin-left: 40px;
     margin-right: 40px;
   }
 
   .details-wrap {
+    background-color: white;
     width: 25%;
     margin-left: 40px;
     margin-right: 40px;
@@ -40,8 +60,9 @@ button {
 }
 
 .footer {
-  color: $input-grey;
-  margin: 0px 0px 40px 40px;
+  color: $grey;
+  margin: 0px 40px;
+  padding: 20px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -52,7 +73,7 @@ button {
   height: 0;
   border-style: solid;
   border-width: 7px 20px 7px 0;
-  border-color: transparent $input-grey transparent transparent;
+  border-color: transparent $grey transparent transparent;
   margin-right: 2px;
 }
 

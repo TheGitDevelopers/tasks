@@ -1,16 +1,23 @@
-<div class="header">
-  <h1 class="title">Your Negotium App</h1>
-</div>
+<div [ngClass]="task.returnBackground()">
+  <div class="header">
+    <h1 *ngIf="task.isNegotium; else elseBlock" class="title negotium-title">
+      Your Negotium App
+    </h1>
+    <ng-template #elseBlock
+      ><h1 class="title other-title">Other tasks</h1></ng-template
+    >
+  </div>
 
-<div class="task">
-  <div class="details-wrap">
-    <app-task-details [task]="task"></app-task-details>
+  <div class="task">
+    <div class="details-wrap">
+      <app-task-details [task]="task"></app-task-details>
+    </div>
+    <div class="description-wrap">
+      <app-task-description></app-task-description>
+    </div>
   </div>
-  <div class="description-wrap">
-    <app-task-description></app-task-description>
-  </div>
+  <footer class="footer">
+    <div class="arrow-left"></div>
+    Back to tasks
+  </footer>
 </div>
-<footer class="footer">
-  <div class="arrow-left"></div>
-  Back to tasks
-</footer>

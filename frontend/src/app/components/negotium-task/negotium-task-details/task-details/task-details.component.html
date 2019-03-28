@@ -7,7 +7,7 @@
     <p>Category: {{ task.category }}</p>
   </div>
   <div class="control-buttons">
-    <button class="edit-tasks-button">Edit task</button>
-    <button class="change-status-button">Change Status</button>
+    <button class="button-yellow">Edit task</button>
+    <button [ngClass]="task.returnButtonColor()">Change Status</button>
   </div>
 </div>
