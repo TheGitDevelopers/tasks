@@ -18,8 +18,6 @@ export class FormFieldComponent implements OnInit {
   constructor() { }
   @Input() NameInput;
   @Input() Name;
-  ngOnInit() {
-  }
 
    takeInputName(name) {
     return name;
