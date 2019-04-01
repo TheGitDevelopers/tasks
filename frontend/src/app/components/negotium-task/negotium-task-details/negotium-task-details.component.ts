@@ -11,20 +11,17 @@ export class NegotiumTaskDetailsComponent implements OnInit {
     status: <string>'Done',
     importanceLevel: <number>10,
     category: <string>'Frontend',
-    isNegotium: <boolean>true,
+    isNegotium: <boolean>false,
     returnBackground: function() {
-      if (this.isNegotium) {
-        return 'negotium-background';
-      } else {
-        return 'other-background';
-      }
+      return this.isNegotium ? 'negotium-background' : 'other-background';
     },
     returnButtonColor: function() {
-      if (this.isNegotium) {
-        return 'button-green';
-      } else {
-        return 'button-pink';
-      }
+      return this.negotium ? 'button-green' : 'button-pink';
+      // if (this.isNegotium) {
+      //   return 'button-green';
+      // } else {
+      //   return 'button-pink';
+      // }
     }
   };
 

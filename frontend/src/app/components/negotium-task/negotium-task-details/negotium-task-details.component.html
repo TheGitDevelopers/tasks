@@ -1,9 +1,9 @@
 <div [ngClass]="task.returnBackground()">
   <div class="header">
-    <h1 *ngIf="task.isNegotium; else elseBlock" class="title negotium-title">
+    <h1 *ngIf="task.isNegotium; else otherHeader" class="title negotium-title">
       Your Negotium App
     </h1>
-    <ng-template #elseBlock
+    <ng-template #otherHeader
       ><h1 class="title other-title">Other tasks</h1></ng-template
     >
   </div>
