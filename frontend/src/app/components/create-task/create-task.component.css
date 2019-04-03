@@ -1,0 +1,89 @@
+header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > p {
+  color: #28de77;
+  font-size: 30px;
+  font-weight: 500;
+}
+.form-field-container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.select-level-importance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: grey;
+}
+.select-level-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.select-the-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 109px;
+  color: grey;
+}
+.select-the-category-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.save-the-task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.select-level-base {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  transition-duration: 1s;
+}
+
+.select-level-individual-1 {
+  background-color: #ffd166;
+}
+
+.select-level-individual-2 {
+  background-color: #ef476f;
+}
+
+.select-level-base:hover {
+  opacity: 0.7;
+  transform: scale(0.9);
+}
+
+.easy {
+  background-color: #32f9a5;
+}
+
+.medium {
+  background-color: #ffd166;
+}
+
+.hard {
+  background-color: #ef476f;
+}

@@ -17,11 +17,6 @@ export class NegotiumTaskDetailsComponent implements OnInit {
     },
     returnButtonColor: function() {
       return this.negotium ? 'button-green' : 'button-pink';
-      // if (this.isNegotium) {
-      //   return 'button-green';
-      // } else {
-      //   return 'button-pink';
-      // }
     }
   };
 

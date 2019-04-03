@@ -1,0 +1,95 @@
+<header>
+  <p>Create the task!</p>
+</header>
+<div class="form-field-container">
+  <app-form-field NameInput="Assigned to:" Name="assign"> </app-form-field>
+  <app-form-field NameInput="Topic:" Name="topic"> </app-form-field>
+  <app-form-field NameInput="Estimated time:" Name="estimated">
+  </app-form-field>
+  <app-form-field NameInput="Status:" Name="status"> </app-form-field>
+</div>
+<div class="select-level-importance">
+  Select the level of Importance:
+</div>
+<div class="select-level-container">
+  <app-select-level
+    *ngFor="let button of buttonsArray"
+    [ngClass]="returnLevel(button.value)"
+    [value]="button.value"
+    class="select-level-base select-level-individual"
+  ></app-select-level>
+  <!-- <app-select-level
+    number="1"
+    selectLevel="select-level-base"
+    selectLevelIndividual="select-level-individual"
+  ></app-select-level>
+  <app-select-level
+    number="2"
+    selectLevel="select-level-base"
+    selectLevelIndividual="select-level-individual"
+  ></app-select-level>
+  <app-select-level
+    number="3"
+    selectLevel="select-level-base"
+    selectLevelIndividual="select-level-individual"
+  ></app-select-level>
+  <app-select-level
+    number="4"
+    selectLevel="select-level-base"
+    selectLevelIndividual="select-level-individual-1"
+  ></app-select-level>
+  <app-select-level
+    number="5"
+    selectLevel="select-level-base"
+    selectLevelIndividual="select-level-individual-1"
+  ></app-select-level>
+  <app-select-level
+    number="6"
+    selectLevel="select-level-base"
+    selectLevelIndividual="select-level-individual-1"
+  ></app-select-level>
+  <app-select-level
+    number="7"
+    selectLevel="select-level-base"
+    selectLevelIndividual="select-level-individual-1"
+  ></app-select-level>
+  <app-select-level
+    number="8"
+    selectLevel="select-level-base"
+    selectLevelIndividual="select-level-individual-2"
+  ></app-select-level>
+  <app-select-level
+    number="9"
+    selectLevel="select-level-base"
+    selectLevelIndividual="select-level-individual-2"
+  ></app-select-level>
+  <app-select-level
+    number="10"
+    selectLevel="select-level-base"
+    selectLevelIndividual="select-level-individual-2"
+  ></app-select-level> -->
+</div>
+<div class="select-the-category">
+  Select the category:
+</div>
+<div class="select-the-category-button-container">
+  <app-button-select-category
+    selectCategory="select-category-base"
+    selectClass="select-button-backend"
+    name="Backend"
+  >
+  </app-button-select-category>
+  <app-button-select-category
+    selectCategory="select-category-base"
+    selectClass="select-button-ui-ux"
+    name="UI/UX"
+  >
+  </app-button-select-category>
+  <app-button-select-category
+    selectCategory="select-category-base"
+    selectClass="select-button-frontend"
+    name="FRONTEND"
+  >
+  </app-button-select-category>
+</div>
+<div class="save-the-task"><p>Save the task!</p></div>

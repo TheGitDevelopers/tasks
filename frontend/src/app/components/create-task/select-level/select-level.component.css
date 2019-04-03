@@ -1,0 +1,25 @@
+.select-level-base {
+  width: 40px;
+  height: 40px;
+  color: white;
+  margin-left: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+}
+
+.select-level-individual-2-custom {
+  width: 40px;
+  height: 40px;
+  color: white;
+  margin-left: 20px;
+  margin-top: 15px;
+  background-color: #ef476f;
+  transition-duration: 1s;
+}
+.select-level-individual-2-custom > p {
+  margin-left: 28%;
+  padding-top: 9px;
+}
