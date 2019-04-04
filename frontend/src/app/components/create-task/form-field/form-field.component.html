@@ -1,8 +1,6 @@
 <form [formGroup]="form">
-<div class="name-field">
-<p>{{ NameInput }}</p>
-</div>
-<div class="field">
-<input class="input-field" type="text" [formControlName]="takeInputName('sampleInput')"/>
-</div>
+  <div *ngFor="let controlName of fcNameArray">
+    <label class="input-label">{{ parseString(controlName) }}</label>
+    <input [formControlName]="controlName" />
+  </div>
 </form>

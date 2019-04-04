@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { inspectNativeElement } from '@angular/platform-browser/src/dom/debug/ng_probe';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-task',
@@ -6,41 +8,64 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-task.component.css', '/create-task-rwd.component.css']
 })
 export class CreateTaskComponent implements OnInit {
-  buttonsArray: Array<object> = [
+  buttonsArray = [
     {
-      value: <number>1
+      value: <number>1,
+      isActive: <boolean>false
     },
     {
-      value: <number>2
+      value: <number>2,
+      isActive: <boolean>false
     },
     {
-      value: <number>3
+      value: <number>3,
+      isActive: <boolean>false
     },
     {
-      value: <number>4
+      value: <number>4,
+      isActive: <boolean>false
     },
     {
-      value: <number>5
+      value: <number>5,
+      isActive: <boolean>false
     },
     {
-      value: <number>6
+      value: <number>6,
+      isActive: <boolean>false
     },
     {
-      value: <number>7
+      value: <number>7,
+      isActive: <boolean>false
     },
     {
-      value: <number>8
+      value: <number>8,
+      isActive: <boolean>false
     },
     {
-      value: <number>9
+      value: <number>9,
+      isActive: <boolean>false
     },
     {
-      value: <number>10
+      value: <number>10,
+      isActive: <boolean>false
     }
   ];
 
-  returnLevel(value) {
+  returnLevel(value: number) {
     return value < 4 ? ' easy ' : value < 7 ? 'medium' : 'hard';
+  }
+
+  addActiveClass(isActive: boolean) {
+    return isActive ? 'active' : '';
+  }
+
+  toggleActiveButton(button) {
+    this.buttonsArray.forEach(btn => {
+      if (btn.value != button.value) {
+        btn.isActive = false;
+      }
+    });
+    button.isActive = !button.isActive;
   }
 
   constructor() {}

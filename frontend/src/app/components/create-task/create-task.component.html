@@ -2,11 +2,7 @@
   <p>Create the task!</p>
 </header>
 <div class="form-field-container">
-  <app-form-field NameInput="Assigned to:" Name="assign"> </app-form-field>
-  <app-form-field NameInput="Topic:" Name="topic"> </app-form-field>
-  <app-form-field NameInput="Estimated time:" Name="estimated">
-  </app-form-field>
-  <app-form-field NameInput="Status:" Name="status"> </app-form-field>
+  <app-form-field></app-form-field>
 </div>
 <div class="select-level-importance">
   Select the level of Importance:
@@ -14,9 +10,10 @@
 <div class="select-level-container">
   <app-select-level
     *ngFor="let button of buttonsArray"
-    [ngClass]="returnLevel(button.value)"
+    [ngClass]="[returnLevel(button.value), addActiveClass(button.isActive)]"
     [value]="button.value"
     class="select-level-base select-level-individual"
+    (click)="toggleActiveButton(button)"
   ></app-select-level>
   <!-- <app-select-level
     number="1"
