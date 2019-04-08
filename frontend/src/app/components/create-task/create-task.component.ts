@@ -5,7 +5,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-create-task',
   templateUrl: './create-task.component.html',
-  styleUrls: ['./create-task.component.css', '/create-task-rwd.component.css']
+  styleUrls: ['./create-task.component.scss', '/create-task-rwd.component.css']
 })
 export class CreateTaskComponent implements OnInit {
   buttonsArray = [

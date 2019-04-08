@@ -5,7 +5,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-form-field',
   templateUrl: './form-field.component.html',
-  styleUrls: ['./form-field.component.css', './form-field-css.component.css']
+  styleUrls: ['./form-field.component.scss', './form-field-css.component.css']
 })
 export class FormFieldComponent implements OnInit {
   fcNameArray = [];
