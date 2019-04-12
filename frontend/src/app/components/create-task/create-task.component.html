@@ -1,0 +1,42 @@
+<header>
+  <p>Create the task!</p>
+</header>
+<div class="form-field-container">
+  <app-form-field></app-form-field>
+</div>
+<div class="select-level-importance">
+  Select the level of Importance:
+</div>
+<div class="select-level-container">
+  <app-select-level
+    *ngFor="let button of buttonsArray"
+    [ngClass]="[returnLevel(button.value), addActiveClass(button.isActive)]"
+    [value]="button.value"
+    class="select-level-base select-level-individual"
+    (click)="toggleActiveButton(button)"
+  ></app-select-level>
+</div>
+<div class="select-the-category">
+  Select the category:
+</div>
+<div class="select-the-category-button-container">
+  <app-button-select-category
+    selectCategory="select-category-base"
+    selectClass="select-button-backend"
+    name="Backend"
+  >
+  </app-button-select-category>
+  <app-button-select-category
+    selectCategory="select-category-base"
+    selectClass="select-button-ui-ux"
+    name="UI/UX"
+  >
+  </app-button-select-category>
+  <app-button-select-category
+    selectCategory="select-category-base"
+    selectClass="select-button-frontend"
+    name="Frontend"
+  >
+  </app-button-select-category>
+</div>
+<div class="save-the-task"><p>Save the task!</p></div>

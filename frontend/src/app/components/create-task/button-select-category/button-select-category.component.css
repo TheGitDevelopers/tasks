@@ -1,0 +1,23 @@
+.select-category-base {
+  width: 200px;
+  height: 50px;
+  margin-top: 50px;
+  margin-left: 20px;
+  text-align: center;
+}
+.select-button-backend {
+  background-color: #118ab2;
+}
+.select-button-ui-ux {
+  border: 2px solid rgb(115, 255, 0);
+  background-color: white;
+  color: black;
+  font-weight: 700;
+}
+.select-button-frontend {
+  background-color: #ef476f;
+}
+
+button {
+  padding: 0px;
+}

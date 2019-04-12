@@ -10,6 +10,11 @@ import { NegotiumListAppComponent } from './components/negotium-task/negotium-li
 import { NegotiumTaskDetailsComponent } from './components/negotium-task/negotium-task-details/negotium-task-details.component';
 import { TaskDescriptionComponent } from './components/negotium-task/negotium-task-details/task-description/task-description.component';
 import { TaskDetailsComponent } from './components/negotium-task/negotium-task-details/task-details/task-details.component';
+import { CreateTaskComponent } from './components/create-task/create-task.component';
+import { FormFieldComponent } from './components/create-task/form-field/form-field.component';
+import { SelectLevelComponent } from './components/create-task/select-level/select-level.component';
+import { ButtonSelectCategoryComponent } from './components/create-task/button-select-category/button-select-category.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,9 +25,13 @@ import { TaskDetailsComponent } from './components/negotium-task/negotium-task-d
     NegotiumListAppComponent,
     NegotiumTaskDetailsComponent,
     TaskDescriptionComponent,
-    TaskDetailsComponent
+    TaskDetailsComponent,
+    CreateTaskComponent,
+    FormFieldComponent,
+    SelectLevelComponent,
+    ButtonSelectCategoryComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
