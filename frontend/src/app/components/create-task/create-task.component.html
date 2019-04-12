@@ -2,7 +2,7 @@
   <p>Create the task!</p>
 </header>
 <div class="form-field-container">
-  <app-form-field></app-form-field>
+  <app-form-field (taskDetails)="taskDetails($event)"></app-form-field>
 </div>
 <div class="select-level-importance">
   Select the level of Importance:
@@ -24,19 +24,24 @@
     selectCategory="select-category-base"
     selectClass="select-button-backend"
     name="Backend"
+    (click)="selectCategory($event)"
   >
   </app-button-select-category>
   <app-button-select-category
     selectCategory="select-category-base"
     selectClass="select-button-ui-ux"
     name="UI/UX"
+    (click)="selectCategory($event)"
   >
   </app-button-select-category>
   <app-button-select-category
     selectCategory="select-category-base"
     selectClass="select-button-frontend"
     name="Frontend"
+    (click)="selectCategory($event)"
   >
   </app-button-select-category>
 </div>
-<div class="save-the-task"><p>Save the task!</p></div>
+<div class="save-the-task">
+  <button (click)="saveTask()">Save the task!</button>
+</div>

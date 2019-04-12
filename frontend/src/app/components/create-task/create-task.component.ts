@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { inspectNativeElement } from '@angular/platform-browser/src/dom/debug/ng_probe';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { HttpTaskService } from './http-task.service';
 
 @Component({
   selector: 'app-create-task',
@@ -50,7 +51,14 @@ export class CreateTaskComponent implements OnInit {
       isActive: <boolean>false
     }
   ];
-
+  task = {
+    assignedTo: undefined,
+    category: undefined,
+    estimatedTime: undefined,
+    lvlOfImportance: undefined,
+    status: undefined,
+    topic: undefined
+  };
   returnLevel(value: number) {
     return value < 4 ? ' easy ' : value < 7 ? 'medium' : 'hard';
   }
@@ -66,9 +74,31 @@ export class CreateTaskComponent implements OnInit {
       }
     });
     button.isActive = !button.isActive;
+    this.task = { ...this.task, lvlOfImportance: button.value };
   }
 
-  constructor() {}
+  constructor(private HttpTask: HttpTaskService) {}
 
   ngOnInit() {}
+  sendTask() {
+    this.HttpTask.sendTask({ test: 'xd' });
+  }
+  taskDetails(details) {
+    this.task = { ...this.task, ...details };
+  }
+  selectCategory(event) {
+    this.task = {
+      ...this.task,
+      category: event.target.innerText.toLowerCase()
+    };
+  }
+  saveTask() {
+    for (let key in this.task) {
+      if (this.task[key] === undefined || this.task[key] === null) {
+        alert('Fill up form');
+        return;
+      }
+    }
+    this.HttpTask.sendTask(this.task);
+  }
 }

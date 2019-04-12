@@ -1,4 +1,4 @@
-<li [class]="mode + '-item'" routerLink="">
+<li [class]="mode + '-item'" [routerLink]="['/negotium-task-details', name]">
   <img
     [src]="
       check == true
@@ -7,5 +7,5 @@
     "
     class="check-status"
   />
-  <ng-content></ng-content>
+  {{ name }}
 </li>

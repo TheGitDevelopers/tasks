@@ -1,6 +1,10 @@
 <form [formGroup]="form">
   <div *ngFor="let controlName of fcNameArray">
     <label class="input-label">{{ parseString(controlName) }}</label>
-    <input [formControlName]="controlName" />
+    <input
+      [formControlName]="controlName"
+      [(ngModel)]="details[controlName]"
+      (change)="emitTaskDetails()"
+    />
   </div>
 </form>

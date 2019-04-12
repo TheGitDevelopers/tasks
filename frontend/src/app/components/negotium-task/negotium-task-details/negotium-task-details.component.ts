@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-negotium-task-details',
@@ -19,8 +21,17 @@ export class NegotiumTaskDetailsComponent implements OnInit {
       return this.negotium ? 'button-green' : 'button-pink';
     }
   };
+  name;
+  constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
-  constructor() {}
-
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.name = params.get('name');
+      // this.http
+      //   .get(`http://localhost:9000/api/getName/${this.name}`)
+      //   .subscribe(data => {
+      //     this.task = { ...this.task, ...data };
+      //   });
+    });
+  }
 }
