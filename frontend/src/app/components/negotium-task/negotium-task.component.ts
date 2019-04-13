@@ -62,28 +62,32 @@ export class NegotiumTaskComponent implements OnInit {
       check: false
     }
   ];
+  tasks;
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.mode = params.get('mode');
     });
+    this.contentSwap();
   }
 
   contentSwap() {
     switch (this.mode) {
       case 'othertasks':
-        // this.http.get('http://localhost:9000/api/get/othertasks').subscribe(tasks => {
-        //   this.otherTasks = [...tasks];
-        // });
+        this.http
+          .get<Array<Object>>('http://localhost:9000/api/tasks')
+          .subscribe(tasks => {
+            this.tasks = [...tasks];
+          });
         this.title = 'Other Tasks';
-        return this.otherTasks;
       case 'yourapp':
-        // this.http.get('http://localhost:9000/api/get/yourapp').subscribe(tasks => {
-        //   this.yourApp = [...tasks];
-        // });
+        this.http
+          .get<Array<Object>>('http://localhost:9000/api/tasks')
+          .subscribe(tasks => {
+            this.tasks = [...tasks];
+          });
         this.title = 'Your Negotium App';
-        return this.yourApp;
     }
   }
 }

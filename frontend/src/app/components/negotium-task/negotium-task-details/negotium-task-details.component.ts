@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
+interface TaskProperty {
+  task: Object;
+}
+
 @Component({
   selector: 'app-negotium-task-details',
   templateUrl: './negotium-task-details.component.html',
@@ -21,17 +25,17 @@ export class NegotiumTaskDetailsComponent implements OnInit {
       return this.negotium ? 'button-green' : 'button-pink';
     }
   };
-  name;
+  id;
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.name = params.get('name');
-      // this.http
-      //   .get(`http://localhost:9000/api/getName/${this.name}`)
-      //   .subscribe(data => {
-      //     this.task = { ...this.task, ...data };
-      //   });
+      this.id = params.get('id');
+      this.http
+        .get<TaskProperty>(`http://localhost:9000/api/tasks/${this.id}`)
+        .subscribe(data => {
+          this.task = { ...this.task, ...data.task };
+        });
     });
   }
 }
