@@ -19,7 +19,6 @@ $dark-blue: #073b4c;
   height: 20vh;
   align-items: center;
   display: flex;
-  padding-top: 1em;
 }
 
 .yourapp-outer ul {
@@ -27,7 +26,7 @@ $dark-blue: #073b4c;
   width: 30%;
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 80vh;
   margin-bottom: 1rem;
   font-size: 1.1rem;
@@ -49,7 +48,6 @@ $dark-blue: #073b4c;
   height: 20vh;
   align-items: center;
   display: flex;
-  padding-top: 1em;
 }
 
 .othertasks-outer ul {
@@ -57,7 +55,7 @@ $dark-blue: #073b4c;
   width: 30%;
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 80vh;
   margin-bottom: 1rem;
   font-size: 1.1rem;
@@ -68,10 +66,27 @@ app-negotium-list-app {
   margin-bottom: 1em;
   cursor: pointer;
   transition: 0.2s transform ease-in-out;
+  flex-grow: 1;
 }
 
 app-negotium-list-app:hover {
   transform: scale(1.1);
+}
+
+@media only screen and (max-height: 700px) {
+  .yourapp-title {
+    font-size: 2.1em;
+  }
+  .othertasks-title {
+    font-size: 2.1em;
+  }
+  .check-status {
+    width: 1.8em;
+    height: 1.8em;
+  }
+  app-negotium-list-app {
+    margin-bottom: 0.5em;
+  }
 }
 
 @media only screen and (max-width: 600px) {

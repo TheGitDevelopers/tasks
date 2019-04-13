@@ -17,9 +17,10 @@
 .yourapp-item {
   display: flex;
   justify-content: space-between;
-  padding: 1em 0.25em;
   align-items: center;
   @extend %border;
+  padding: 0 0.25em;
+  height: 100%;
 }
 
 .yourapp-item:after {
@@ -35,10 +36,11 @@
 .othertasks-item {
   display: flex;
   justify-content: space-between;
-  padding: 1em 0.25em;
+  padding: 0 0.25em;
   align-items: center;
   @extend %border;
   background-color: #fff;
+  height: 100%;
 }
 
 .othertasks-item:after {
