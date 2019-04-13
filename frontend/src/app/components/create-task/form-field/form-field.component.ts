@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { formArrayNameProvider } from '@angular/forms/src/directives/reactive_directives/form_group_name';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-form-field',
@@ -8,8 +9,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./form-field.component.scss', './form-field-css.component.css']
 })
 export class FormFieldComponent implements OnInit {
+  @Output() taskDetails: EventEmitter<any> = new EventEmitter();
   fcNameArray = [];
-
+  details: Object = {};
   constructor() {}
 
   ngOnInit() {
@@ -17,6 +19,9 @@ export class FormFieldComponent implements OnInit {
       this.fcNameArray.push(fc);
     });
     console.log(this.fcNameArray);
+    for (let key in this.form.controls) {
+      this.details[key] = this.form.controls[key].value;
+    }
   }
 
   form = new FormGroup({
@@ -34,5 +39,9 @@ export class FormFieldComponent implements OnInit {
         .replace(/([a-z](?=[A-Z]))/g, '$1 ')
         .toLowerCase()
     );
+  }
+
+  emitTaskDetails() {
+    this.taskDetails.emit(this.details);
   }
 }

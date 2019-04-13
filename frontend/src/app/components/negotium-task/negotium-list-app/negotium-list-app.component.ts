@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class NegotiumListAppComponent implements OnInit {
   @Input() check;
   @Input() mode;
+  @Input() name;
   constructor() {}
 
   ngOnInit() {}

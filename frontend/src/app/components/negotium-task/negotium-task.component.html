@@ -5,7 +5,9 @@
       *ngFor="let item of contentSwap()"
       [mode]="mode"
       [check]="item.check"
-      >{{ item.name }}</app-negotium-list-app
+      [name]="item.name"
     >
+      <!-- {{ item.name }} -->
+    </app-negotium-list-app>
   </ul>
 </div>
