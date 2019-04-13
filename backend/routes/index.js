@@ -4,6 +4,7 @@ const ExampleModel = require("../models/exampleModel.js");
 const TaskModel = require("../models/taskModel.js");
 const bodyParser = require("body-parser");
 const router = express.Router();
+const ObjectID = require("mongodb").ObjectID;
 
 /* GET home page. */
 router.get("/", (req, res, next) => {
@@ -12,8 +13,28 @@ router.get("/", (req, res, next) => {
   });
 });
 router.get("/api/tasks", (req, res, next) => {
-  ExampleModel.findOne({ name: "test" }).then(result => {
-    res.json({ name: result.name });
+  TaskModel.find()
+    .then(tasks => {
+      res.send(tasks);
+    })
+    .catch(e => {
+      res.status(400).send(e);
+    });
+});
+
+router.get("/api/tasks/:id", (req, res, next) => {
+  const id = req.params.id;
+  console.log(id);
+  if (!ObjectID.isValid(id)) {
+    return res.status(400).send({ message: "Id is not valid" });
+  }
+
+  TaskModel.findById(id).then(task => {
+    if (task) {
+      res.send({ task });
+    } else {
+      res.status(404).send({ message: "Document with that id was not found" });
+    }
   });
 });
 
