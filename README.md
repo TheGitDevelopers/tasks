@@ -8,7 +8,9 @@ To run the application:
 
 1)Start the backend application and connect it to the database - to do it just use NPM START command in the backend directory.
 The server is listening on port 9000
+
 2)Then you can launch up the client using the same npm start command.
+
 3)Now you can use all of the  functionalities we`ve already implemented.
 
 
