@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { inspectNativeElement } from '@angular/platform-browser/src/dom/debug/ng_probe';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpTaskService } from './http-task.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-task',
@@ -77,7 +78,7 @@ export class CreateTaskComponent implements OnInit {
     this.task = { ...this.task, importanceLevel: button.value };
   }
 
-  constructor(private HttpTask: HttpTaskService) {}
+  constructor(private HttpTask: HttpTaskService, private router: Router) {}
 
   ngOnInit() {}
   taskDetails(details) {
@@ -96,6 +97,9 @@ export class CreateTaskComponent implements OnInit {
         return;
       }
     }
-    this.HttpTask.sendTask(this.task);
+    this.HttpTask.sendTask(this.task).subscribe(data => {
+      window.alert('Send successfully');
+      this.router.navigate(['/negotium-task/yourapp']);
+    });
   }
 }

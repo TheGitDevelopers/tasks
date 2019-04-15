@@ -78,14 +78,14 @@ export class NegotiumTaskComponent implements OnInit {
         this.http
           .get<Array<Object>>('http://localhost:9000/api/tasks')
           .subscribe(tasks => {
-            this.tasks = [...tasks];
+            this.tasks = [...tasks].reverse();
           });
         this.title = 'Other Tasks';
       case 'yourapp':
         this.http
           .get<Array<Object>>('http://localhost:9000/api/tasks')
           .subscribe(tasks => {
-            this.tasks = [...tasks];
+            this.tasks = [...tasks].reverse();
           });
         this.title = 'Your Negotium App';
     }

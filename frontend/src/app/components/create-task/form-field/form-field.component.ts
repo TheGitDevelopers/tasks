@@ -25,10 +25,10 @@ export class FormFieldComponent implements OnInit {
   }
 
   form = new FormGroup({
-    assignedTo: new FormControl('alek', Validators.required),
-    topic: new FormControl('frontend', Validators.required),
-    estimatedTime: new FormControl('time', Validators.required),
-    status: new FormControl('status', Validators.required)
+    assignedTo: new FormControl('', Validators.required),
+    topic: new FormControl('', Validators.required),
+    estimatedTime: new FormControl('', Validators.required),
+    status: new FormControl('', Validators.required)
   });
 
   parseString(labelName) {
