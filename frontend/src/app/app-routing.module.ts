@@ -13,7 +13,7 @@ const routes: Routes = [
     path: 'negotium-task-details/:id',
     component: NegotiumTaskDetailsComponent
   },
-  { path: 'negotium-task/', component: NegotiumTaskDetailsComponent },
+  { path: 'negotium-task', component: NegotiumTaskDetailsComponent },
   { path: 'create-task', component: CreateTaskComponent }
 ];
 

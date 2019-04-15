@@ -92,3 +92,21 @@ header > p {
   opacity: 0.7;
   transform: scale(0.9);
 }
+
+.footer {
+  color: $input-grey;
+  margin: 20px 40px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 20px 7px 0;
+  border-color: transparent $input-grey transparent transparent;
+  margin-right: 2px;
+}
