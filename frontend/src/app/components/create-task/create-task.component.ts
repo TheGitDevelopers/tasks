@@ -55,7 +55,7 @@ export class CreateTaskComponent implements OnInit {
     assignedTo: undefined,
     category: undefined,
     estimatedTime: undefined,
-    lvlOfImportance: undefined,
+    importanceLevel: undefined,
     status: undefined,
     topic: undefined
   };
@@ -74,15 +74,12 @@ export class CreateTaskComponent implements OnInit {
       }
     });
     button.isActive = !button.isActive;
-    this.task = { ...this.task, lvlOfImportance: button.value };
+    this.task = { ...this.task, importanceLevel: button.value };
   }
 
   constructor(private HttpTask: HttpTaskService) {}
 
   ngOnInit() {}
-  sendTask() {
-    this.HttpTask.sendTask({ test: 'xd' });
-  }
   taskDetails(details) {
     this.task = { ...this.task, ...details };
   }

@@ -39,6 +39,7 @@ router.get("/api/tasks/:id", (req, res, next) => {
 });
 
 router.post("/api/tasks", (req, res) => {
+  console.log("test");
   console.log(req.body);
   task = new TaskModel({
     assignedTo: req.body.assignedTo,

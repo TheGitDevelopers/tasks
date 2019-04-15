@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'negotium-task/:mode', component: NegotiumTaskComponent },
   {
-    path: 'negotium-task-details/:name',
+    path: 'negotium-task-details/:id',
     component: NegotiumTaskDetailsComponent
   },
   { path: 'negotium-task/', component: NegotiumTaskDetailsComponent },

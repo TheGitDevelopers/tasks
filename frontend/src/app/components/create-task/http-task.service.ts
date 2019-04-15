@@ -8,7 +8,8 @@ export class HttpTaskService {
   constructor(private http: HttpClient) {}
 
   sendTask(details) {
-    console.log(details);
-    // this.http.post('http://localhost:9000/api/POST', details);
+    this.http
+      .post('http://localhost:9000/api/tasks', details)
+      .subscribe(data => window.alert('Send successfully'));
   }
 }

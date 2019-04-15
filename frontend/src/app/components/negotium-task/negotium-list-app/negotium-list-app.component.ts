@@ -6,10 +6,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./negotium-list-app.component.scss']
 })
 export class NegotiumListAppComponent implements OnInit {
-  @Input() check;
+  check: Boolean = true;
+  @Input() status;
   @Input() mode;
   @Input() name;
+  @Input() id;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.status == 'In progress' ? (this.check = false) : (this.check = true);
+  }
 }
