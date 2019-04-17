@@ -39,11 +39,7 @@ export class FormFieldComponent implements OnInit {
     return !nameExist ? { nameNotExist: true } : null;
   };
   form = new FormGroup({
-    assignedTo: new FormControl('alek', [
-      Validators.required,
-      this.checkName,
-      Validators.pattern(/\w/g)
-    ]),
+    assignedTo: new FormControl('alek', [Validators.required, this.checkName]),
     topic: new FormControl('frontend', Validators.required),
     estimatedTime: new FormControl('time', Validators.required),
     status: new FormControl('status', Validators.required)
