@@ -11,6 +11,7 @@ export class ButtonSelectCategoryComponent implements OnInit {
   @Input() selectCategory;
   @Input() selectClass;
   @Input() name;
+  @Input() active;
   ngOnInit() {
   }
 

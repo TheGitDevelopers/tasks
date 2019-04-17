@@ -6,5 +6,16 @@
       [(ngModel)]="details[controlName]"
       (change)="emitTaskDetails()"
     />
+    <div
+      class="errors"
+      *ngIf="form.controls[controlName].errors && startValidation"
+    >
+      <div *ngIf="form.controls[controlName].errors.required">
+        This input is required
+      </div>
+      <div *ngIf="form.controls[controlName].errors.nameNotExist">
+        This name doesn't exist
+      </div>
+    </div>
   </div>
 </form>

@@ -1,3 +1,5 @@
-<button [ngClass]="selectCategory + ' ' + selectClass">
-{{name}}
+<button
+  [ngClass]="[selectCategory, selectClass, active === true ? 'active' : '']"
+>
+  {{ name }}
 </button>

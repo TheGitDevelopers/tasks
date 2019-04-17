@@ -9,6 +9,9 @@ import { HttpTaskService } from './http-task.service';
   styleUrls: ['./create-task.component.scss', '/create-task-rwd.component.css']
 })
 export class CreateTaskComponent implements OnInit {
+  constructor(private HttpTask: HttpTaskService) {}
+
+  ngOnInit() {}
   buttonsArray = [
     {
       value: <number>1,
@@ -59,6 +62,7 @@ export class CreateTaskComponent implements OnInit {
     status: undefined,
     topic: undefined
   };
+  activeCategory = { backend: false, 'ui/ux': false, frontend: false };
   returnLevel(value: number) {
     return value < 4 ? ' easy ' : value < 7 ? 'medium' : 'hard';
   }
@@ -77,9 +81,6 @@ export class CreateTaskComponent implements OnInit {
     this.task = { ...this.task, importanceLevel: button.value };
   }
 
-  constructor(private HttpTask: HttpTaskService) {}
-
-  ngOnInit() {}
   taskDetails(details) {
     this.task = { ...this.task, ...details };
   }
@@ -87,6 +88,13 @@ export class CreateTaskComponent implements OnInit {
     this.task = {
       ...this.task,
       category: event.target.innerText.toLowerCase()
+    };
+    Object.keys(this.activeCategory).forEach(key => {
+      this.activeCategory[key] = false;
+    });
+    this.activeCategory = {
+      ...this.activeCategory,
+      [event.target.innerText.toLowerCase()]: true
     };
   }
   saveTask() {
