@@ -25,6 +25,7 @@
     selectClass="select-button-backend"
     name="Backend"
     (click)="selectCategory($event)"
+    [active]="activeCategory['backend']"
   >
   </app-button-select-category>
   <app-button-select-category
@@ -32,6 +33,7 @@
     selectClass="select-button-ui-ux"
     name="UI/UX"
     (click)="selectCategory($event)"
+    [active]="activeCategory['ui/ux']"
   >
   </app-button-select-category>
   <app-button-select-category
@@ -39,6 +41,7 @@
     selectClass="select-button-frontend"
     name="Frontend"
     (click)="selectCategory($event)"
+    [active]="activeCategory['frontend']"
   >
   </app-button-select-category>
 </div>

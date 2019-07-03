@@ -1,6 +1,18 @@
+form {
+  text-align: center;
+}
+
+.errors {
+  text-align: center;
+  font-weight: bold;
+  margin: 0.5em 0;
+  line-height: 1.4em;
+  font-size: 0.7em;
+  color: #ef476f;
+}
+
 @media only screen and (max-width: 320px) {
-    .input-field
-        {
-            width:200px;
-        }
+  .input-field {
+    width: 200px;
   }
+}
